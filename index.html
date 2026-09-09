@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Type Faster — jogo de digitação multiplayer</title>
+<meta name="description" content="Type Faster é um jogo de digitação 1x1 em tempo real: 60 segundos, sua palavra contra a do adversário, XP e nível a cada partida.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">TF</span>
+      TYPE FASTER
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <div class="nav-links">
+      <a href="index.html" class="active">Início</a>
+      <a href="como-funciona.html">Como funciona</a>
+      <a href="sobre.html">Sobre o projeto</a>
+      <a href="download.html">Download</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="container hero">
+    <div>
+      <p class="label">jogo de digitação · 1 contra 1 · tempo real</p>
+      <h1>Digite mais rápido<br>que o <span>adversário</span>.</h1>
+      <p class="lede">
+        Crie uma sala, mande o código pro seu par e entrem numa partida de
+        60 segundos. Cada um recebe suas próprias palavras — quem completar
+        mais, ganha. No fim, os dois saem com XP pra subir de nível.
+      </p>
+      <div class="btn-row">
+        <a class="btn btn-primary" href="download.html">Baixar o jogo</a>
+        <a class="btn btn-ghost" href="como-funciona.html">Ver como funciona</a>
+      </div>
+    </div>
+
+    <div class="hero-demo">
+      <div class="demo-clock" data-demo-clock>60</div>
+      <div class="demo-boxes" data-demo-boxes></div>
+      <div class="demo-wpm" data-demo-wpm>0 PPM</div>
+    </div>
+  </section>
+
+  <section class="container section--tight">
+    <div class="stats">
+      <div class="stat"><b>60s</b><span>por partida</span></div>
+      <div class="stat"><b>1v1</b><span>tempo real</span></div>
+      <div class="stat"><b>5</b><span>letras por palavra</span></div>
+      <div class="stat"><b>+XP</b><span>a cada partida</span></div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <p class="label">o que dá pra fazer</p>
+    <h2>Feito pra partidas rápidas e disputadas</h2>
+    <div class="grid-3" style="margin-top: 40px;">
+      <div class="card" style="--accent:#3aa0ff">
+        <h3>Salas em tempo real</h3>
+        <p>Crie uma sala e mande o código, ou entre com um código que
+        recebeu. Assim que os dois estiverem prontos, a partida começa
+        pros dois ao mesmo tempo.</p>
+      </div>
+      <div class="card" style="--accent:#ffd60a">
+        <h3>Palavra própria pra cada um</h3>
+        <p>Você e seu adversário recebem palavras diferentes e sorteadas
+        na hora. Digite certo, letra por letra, pra avançar — sem repetir
+        a mesma palavra duas vezes na mesma partida.</p>
+      </div>
+      <div class="card" style="--accent:#3dd66b">
+        <h3>XP, nível e histórico</h3>
+        <p>Toda partida rende experiência — vencer rende mais, mas
+        participar já garante XP. Seu perfil guarda nível, taxa de
+        vitória e as últimas partidas jogadas.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container cta-band">
+    <h2>Chama alguém pra uma partida.</h2>
+    <p class="lede mx-auto">60 segundos é tempo suficiente pra descobrir quem digita mais rápido.</p>
+    <div class="btn-row">
+      <a class="btn btn-primary" href="download.html">Baixar Type-Faster.apk</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <p>Type Faster — projeto de escola, feito com React Native, Vercel, Neon e Ably.</p>
+    <div class="footer-links">
+      <a href="sobre.html">Sobre o projeto</a>
+      <a href="https://github.com/marcos-dev86/api-type-faster" target="_blank" rel="noopener">Código da API</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

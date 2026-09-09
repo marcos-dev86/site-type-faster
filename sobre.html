@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sobre o projeto — Type Faster</title>
+<meta name="description" content="Como o Type Faster foi construído: React Native, API serverless na Vercel, Neon Postgres e Ably para tempo real.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a class="brand" href="index.html">
+      <span class="brand-mark">TF</span>
+      TYPE FASTER
+    </a>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <div class="nav-links">
+      <a href="index.html">Início</a>
+      <a href="como-funciona.html">Como funciona</a>
+      <a href="sobre.html" class="active">Sobre o projeto</a>
+      <a href="download.html">Download</a>
+    </div>
+  </nav>
+</header>
+
+<main>
+
+  <section class="container section--tight" style="padding-top:64px;">
+    <p class="label">bastidores</p>
+    <h1 style="font-size:clamp(2.2rem,5vw,3.2rem);">Como o Type Faster foi feito</h1>
+    <p class="lede">Um projeto de escola com app mobile, API serverless,
+    banco de dados e tempo real — cada peça com seu próprio papel.</p>
+  </section>
+
+  <section class="container section--tight">
+    <p class="label">arquitetura</p>
+    <h2>As três pontas do sistema</h2>
+    <p style="margin-top:8px;">O app nunca fala direto com o banco. Toda regra do jogo
+    passa pela API; o banco só guarda dado, e o Ably só avisa os celulares
+    quando algo muda.</p>
+
+    <div class="diagram">
+      <div class="diagram-box">App (Expo)<small>React Native</small></div>
+      <div class="diagram-arrow">→</div>
+      <div class="diagram-branch">
+        <div style="display:flex; align-items:center; gap:14px;">
+          <div class="diagram-box">API (Vercel)<small>funções serverless</small></div>
+          <div class="diagram-arrow">→</div>
+          <div class="diagram-box">Neon<small>Postgres</small></div>
+        </div>
+        <div style="display:flex; align-items:center; gap:14px; padding-left:0;">
+          <div class="diagram-arrow" style="transform:rotate(90deg); margin-left:14px;">→</div>
+        </div>
+        <div class="diagram-box">Ably<small>eventos em tempo real</small></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <p class="label">stack técnico</p>
+    <h2>Peça por peça</h2>
+    <div class="stack-list" style="margin-top:32px;">
+      <div class="stack-item">
+        <b>React Native + Expo</b>
+        <p>O app que roda no celular: telas de sala, digitação e perfil,
+        navegação com <code>expo-router</code> e um UUID por aparelho
+        salvo com AsyncStorage pra identificar o jogador.</p>
+      </div>
+      <div class="stack-item">
+        <b>Vercel (API)</b>
+        <p>Funções serverless em TypeScript — uma rota por arquivo — que
+        criam salas, sorteiam palavras, validam progresso e fecham a
+        partida. É a única parte do sistema com acesso ao banco.</p>
+      </div>
+      <div class="stack-item">
+        <b>Neon (Postgres)</b>
+        <p>Guarda salas, jogadores dentro de cada sala, perfis (XP, nível,
+        vitórias) e o histórico de partidas encerradas.</p>
+      </div>
+      <div class="stack-item">
+        <b>Ably</b>
+        <p>Canal em tempo real por sala. Avisa quando o adversário entra,
+        quando a partida começa, o placar dele mudando ao vivo e o
+        resultado final — tudo sem o celular precisar ficar perguntando
+        pro servidor.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container section--tight">
+    <p class="label">código aberto</p>
+    <h2>Quer ver o código?</h2>
+    <p>A API do jogo está disponível no GitHub.</p>
+    <div class="btn-row">
+      <a class="btn btn-ghost" href="https://github.com/marcos-dev86/api-type-faster" target="_blank" rel="noopener">github.com/marcos-dev86/api-type-faster</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-row">
+    <p>Type Faster — projeto de escola, feito com React Native, Vercel, Neon e Ably.</p>
+    <div class="footer-links">
+      <a href="sobre.html">Sobre o projeto</a>
+      <a href="https://github.com/marcos-dev86/api-type-faster" target="_blank" rel="noopener">Código da API</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

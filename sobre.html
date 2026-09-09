@@ -48,14 +48,12 @@
       <div class="diagram-box">App (Expo)<small>React Native</small></div>
       <div class="diagram-arrow">→</div>
       <div class="diagram-branch">
-        <div style="display:flex; align-items:center; gap:14px;">
+        <div class="diagram-row">
           <div class="diagram-box">API (Vercel)<small>funções serverless</small></div>
           <div class="diagram-arrow">→</div>
           <div class="diagram-box">Neon<small>Postgres</small></div>
         </div>
-        <div style="display:flex; align-items:center; gap:14px; padding-left:0;">
-          <div class="diagram-arrow" style="transform:rotate(90deg); margin-left:14px;">→</div>
-        </div>
+        <div class="diagram-arrow diagram-arrow--branch">→</div>
         <div class="diagram-box">Ably<small>eventos em tempo real</small></div>
       </div>
     </div>
@@ -101,11 +99,22 @@
     </div>
   </section>
 
+  <section class="container section--tight">
+    <p class="label">materiais</p>
+    <h2>Protótipo e arquivos do projeto</h2>
+    <p>Uma pasta com o material usado ao longo do desenvolvimento: o PDF
+    com a primeira ideia/versão do projeto, o arquivo da logo e o
+    código-fonte do app em React, compactado em .zip.</p>
+    <div class="btn-row">
+      <a class="btn btn-ghost" href="https://drive.google.com/drive/folders/1Aqp2bYv8Svb1t5zsBb4iybh19tFWcB6-?usp=drive_link" target="_blank" rel="noopener">Abrir pasta no Google Drive</a>
+    </div>
+  </section>
+
 </main>
 
 <footer class="site-footer">
   <div class="container footer-row">
-    <p>Type Faster — projeto de escola, feito com React Native, Vercel, Neon e Ably.</p>
+    <p>Type Faster | projeto de escola, feito com React Native, Vercel, Neon e Ably.</p>
     <div class="footer-links">
       <a href="sobre.html">Sobre o projeto</a>
       <a href="https://github.com/marcos-dev86/api-type-faster" target="_blank" rel="noopener">Código da API</a>

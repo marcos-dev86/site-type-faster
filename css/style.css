@@ -36,10 +36,11 @@
   }
 }
 
-html{ scroll-behavior: smooth; }
+html{ scroll-behavior: smooth; overflow-x: hidden; }
 
 body{
   margin: 0;
+  overflow-x: hidden;
   background: var(--bg);
   color: var(--white);
   font-family: var(--font-mono);
@@ -91,6 +92,15 @@ button{ font-family: inherit; }
 .section--tight{ padding: 56px 0; }
 .section--card{ background: var(--card-2); }
 .section:last-of-type{ border-bottom: none; }
+
+@media (max-width: 640px){
+  .section{ padding: 56px 0; }
+  .section--tight{ padding: 40px 0; }
+}
+@media (max-width: 420px){
+  .container{ padding: 0 18px; }
+  .nav{ padding: 14px 18px; }
+}
 
 .label{
   font-family: var(--font-mono);
@@ -354,6 +364,7 @@ button{ font-family: inherit; }
   gap: 14px;
   flex-wrap: wrap;
   padding: 32px 0 8px;
+  max-width: 100%;
 }
 .diagram-box{
   font-family: var(--font-mono);
@@ -365,6 +376,8 @@ button{ font-family: inherit; }
   border-radius: var(--radius-s);
   padding: 16px 20px;
   text-align: center;
+  flex: 0 1 auto;
+  min-width: 0;
 }
 .diagram-box small{
   display: block;
@@ -373,12 +386,30 @@ button{ font-family: inherit; }
   font-size: .72rem;
   margin-top: 4px;
 }
-.diagram-arrow{ color: var(--yellow); font-size: 1.3rem; }
+.diagram-arrow{ color: var(--yellow); font-size: 1.3rem; flex-shrink: 0; }
+.diagram-arrow--branch{ transform: rotate(90deg); margin-left: 8px; }
 .diagram-branch{
   display: flex;
   flex-direction: column;
   gap: 10px;
   align-items: flex-start;
+  min-width: 0;
+  max-width: 100%;
+}
+.diagram-row{
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+@media (max-width: 640px){
+  .diagram, .diagram-row{ flex-direction: column; align-items: stretch; }
+  .diagram > .diagram-arrow{ align-self: flex-start; transform: rotate(90deg); margin-left: 20px; }
+  .diagram-branch{ width: 100%; }
+  .diagram-arrow--branch{ align-self: flex-start; margin-left: 20px; }
+  .diagram-box{ width: 100%; }
 }
 
 /* ---------- stack list ---------- */

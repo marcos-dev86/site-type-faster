@@ -223,6 +223,9 @@ button{ font-family: inherit; }
   border-radius: var(--radius-s);
   border: 1px solid transparent;
   cursor: pointer;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  text-align: center;
   transition: transform .15s var(--ease), background .15s var(--ease), border-color .15s var(--ease);
 }
 .btn:hover{ transform: translateY(-2px); }

@@ -389,30 +389,31 @@ button{ font-family: inherit; }
   font-size: .72rem;
   margin-top: 4px;
 }
-.diagram-arrow{ color: var(--yellow); font-size: 1.3rem; flex-shrink: 0; }
-.diagram-arrow--branch{ transform: rotate(90deg); margin-left: 8px; }
+.diagram-arrow{ color: var(--yellow); font-size: 1.3rem; flex-shrink: 0; line-height: 1; }
+.diagram-arrow--branch{ transform: rotate(90deg); }
 .diagram-branch{
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: flex-start;
+  align-items: center;
   min-width: 0;
   max-width: 100%;
 }
 .diagram-row{
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
   flex-wrap: wrap;
   min-width: 0;
 }
 
-@media (max-width: 640px){
-  .diagram, .diagram-row{ flex-direction: column; align-items: stretch; }
-  .diagram > .diagram-arrow{ align-self: flex-start; transform: rotate(90deg); margin-left: 20px; }
-  .diagram-branch{ width: 100%; }
-  .diagram-arrow--branch{ align-self: flex-start; margin-left: 20px; }
-  .diagram-box{ width: 100%; }
+@media (max-width: 680px){
+  .diagram{ flex-direction: column; align-items: center; }
+  .diagram-row{ flex-direction: column; align-items: center; }
+  .diagram > .diagram-arrow{ transform: rotate(90deg); }
+  .diagram-branch{ width: 100%; align-items: center; }
+  .diagram-box{ width: 100%; max-width: 320px; }
 }
 
 /* ---------- stack list ---------- */
@@ -444,6 +445,7 @@ button{ font-family: inherit; }
 }
 @media (max-width: 700px){
   .download-card{ grid-template-columns: 1fr; text-align: center; }
+  .download-icon{ margin: 0 auto; }
 }
 .download-icon{
   width: 64px; height: 64px;
@@ -519,6 +521,28 @@ button{ font-family: inherit; }
 .footer-links{ display: flex; gap: 20px; }
 .footer-links a{ font-size: .8rem; color: var(--gray); }
 .footer-links a:hover{ color: var(--yellow); }
+
+/* ---------- small-screen polish ---------- */
+@media (max-width: 480px){
+  h1{ font-size: clamp(1.6rem, 9vw, 2.6rem); }
+  h2{ font-size: clamp(1.4rem, 7.5vw, 1.9rem); }
+  /* the secondary pages set an inline clamp() on their h1 (font-size:clamp(2.2rem,5vw,3.2rem)),
+     which always wins over an external stylesheet rule unless we use !important here */
+  .section--tight h1{ font-size: clamp(1.5rem, 8vw, 2.2rem) !important; }
+
+  .brand{ font-size: 1.05rem; gap: 8px; }
+  .brand-mark{ height: 24px; }
+
+  .btn-row{ flex-direction: column; align-items: stretch; }
+  .btn-row .btn{ width: 100%; }
+
+  .hero-demo{ padding: 24px 16px; }
+  .demo-clock{ width: 56px; height: 56px; font-size: 1.1rem; }
+  .demo-box{ width: 40px; height: 40px; font-size: 1.1rem; }
+
+  .footer-row{ flex-direction: column; text-align: center; }
+  .footer-links{ justify-content: center; }
+}
 
 /* ---------- utility ---------- */
 .text-center{ text-align: center; }

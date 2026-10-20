@@ -1,24 +1,19 @@
 <p align="center">
-  <img src="assets/logo-mark.png" alt="Type Faster" width="170">
+  <img src="assets/logo-mark.png" alt="Type Faster" width="120">
 </p>
 
-<h1 align="center">Type Faster - Site</h1>
+# Type Faster - Site
 
-<p align="center">
-  Site de apresentação do <strong>Type Faster</strong>, um jogo de digitação multiplayer 1x1 em tempo real.
-</p>
+Site de apresentação do **Type Faster**, um jogo de digitação multiplayer 1x1 em tempo real.
 
-<p align="center">
-  <img alt="HTML5" src="https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white">
-  <img alt="CSS3" src="https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white">
-  <img alt="JavaScript" src="https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black">
-  <img alt="Sem frameworks" src="https://img.shields.io/badge/frameworks-nenhum-0f0f0f?style=flat-square">
-</p>
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
+![Sem frameworks](https://img.shields.io/badge/frameworks-nenhum-0f0f0f?style=flat-square)
 
 ---
 
 O site explica como o jogo funciona, detalha a arquitetura por trás dele e disponibiliza o download do APK para Android.
-
 > Projeto de escola desenvolvido com HTML, CSS e JavaScript puros, apresentando um app feito em React Native / Expo.
 
 ## Índice
@@ -44,7 +39,7 @@ O Type Faster é uma disputa de digitação entre dois jogadores, ao vivo:
 ## Estrutura do site
 
 | Página | Conteúdo |
-|---|---|
+| --- | --- |
 | `index.html` | Página inicial, com a proposta do jogo e uma demonstração animada de digitação |
 | `como-funciona.html` | As quatro etapas de uma partida, do código da sala ao resultado final, e a explicação de XP/nível/histórico |
 | `sobre.html` | Bastidores técnicos: a arquitetura do sistema, o stack e os materiais do projeto |
@@ -98,7 +93,7 @@ O código-fonte da API (rotas, regras de XP/nível e sorteio de palavras, schema
 
 Pasta com o material usado ao longo do desenvolvimento - o PDF com a primeira ideia/versão do projeto, o arquivo original da logo e o código-fonte do app em React, compactado em `.zip`:
 
-**[Abrir pasta no Google Drive](https://drive.google.com/drive/folders/1Aqp2bYv8Svb1t5zsBb4iybh19tFWcB6-?usp=drive_link)**
+**[Abrir pasta no Google Drive](https://drive.google.com/drive/folders/1bQoJbi-1QAq8ZPr4CrNO2DZJrcBelyfx?usp=drive_link)**
 
 ## Tecnologias do site
 
@@ -113,4 +108,4 @@ Pasta com o material usado ao longo do desenvolvimento - o PDF com a primeira id
 
 ---
 
-<p align="center"><sub>Projeto de escola - Type Faster © 2026</sub></p>
+Projeto de escola - Type Faster © 2026
